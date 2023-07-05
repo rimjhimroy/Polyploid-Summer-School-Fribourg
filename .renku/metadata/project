@@ -1,0 +1,38 @@
+{
+  "@renku_data_type": "renku.domain_model.project.Project",
+  "@renku_oid": "project",
+  "agent_version": "2.5.0",
+  "annotations": [],
+  "creator": {
+    "@renku_data_type": "renku.domain_model.provenance.agent.Person",
+    "@renku_data_value": {
+      "affiliation": null,
+      "alternate_name": null,
+      "email": "rimjhim.roy.ch@gmail.com",
+      "id": "mailto:rimjhim.roy.ch@gmail.com",
+      "name": "Rimjhim Roy Choudhury"
+    }
+  },
+  "date_created": {
+    "@renku_data_type": "datetime.datetime",
+    "@renku_data_value": "2023-07-05T09:37:22.724799+00:00"
+  },
+  "description": "My first renku tutorial",
+  "id": "/projects/rimjhim.roy.ch/test-renku",
+  "keywords": [],
+  "minimum_renku_version": "2.4.0",
+  "name": "test renku",
+  "template_metadata": {
+    "@renku_data_type": "renku.domain_model.project.ProjectTemplateMetadata",
+    "@renku_data_value": {
+      "immutable_template_files": [],
+      "metadata": "{\"__template_source__\": \"https://github.com/SwissDataScienceCenter/renku-project-template\", \"__template_ref__\": \"0.6.1\", \"__template_id__\": \"bioc-minimal\", \"__namespace__\": \"rimjhim.roy.ch\", \"__repository__\": \"https://renkulab.io/gitlab\", \"__sanitized_project_name__\": \"test-renku\", \"__project_slug__\": \"rimjhim.roy.ch/test-renku\", \"__project_description__\": \"My first renku tutorial\", \"__renku_version__\": \"2.5.0\", \"name\": \"test renku\", \"__name__\": \"test renku\", \"__template_version__\": \"fc20036571b226da59eca0897da7c10727f0f0a6\", \"__automated_update__\": true}",
+      "ssh_supported": true,
+      "template_id": "bioc-minimal",
+      "template_ref": "0.6.1",
+      "template_source": "https://github.com/SwissDataScienceCenter/renku-project-template",
+      "template_version": "fc20036571b226da59eca0897da7c10727f0f0a6"
+    }
+  },
+  "version": 10
+}
