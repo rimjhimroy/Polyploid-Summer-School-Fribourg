@@ -6,29 +6,22 @@ channels:
 dependencies:
   - bc
   - bcftools
-  - bioconductor-biostrings
-  - bioconductor-genomicranges
-  - bioconductor-rsamtools
-  - bioconductor-rtracklayer
-  - bioconductor-s4vectors
-  - bioconductor-variantannotation
   - bzip2
   - freebayes
   - gatk4
   - octopus
   - parallel
   - pysam
-  - r-base
-  - r-data.table
-  - r-tidyverse
-  - r-optparse
-  - r-gridextra
-  - r-purrr
-  - r-stringr
   - rtg-tools
   - samtools
   - sed
   - vcflib
   - yaml
+  - kmc
+  - smudgeplot
+  - genomescope2
+  - hifiasm
+  - minimap2
+  - purge_dups
 prefix: "/opt/conda"
 
