@@ -4,19 +4,10 @@ channels:
   - bioconda
   - conda-forge
 dependencies:
-  - _libgcc_mutex=0.1=conda_forge
-  - _openmp_mutex=4.5=2_gnu
-  - _r-mutex=1.0.1=anacondar_1
-  - aiohttp=3.8.4=py39hd1e30aa_1
-  - aiosignal=1.3.1=pyhd8ed1ab_0
-  - alsa-lib=1.2.9=hd590300_0
-  - argcomplete=3.1.1=pyhd8ed1ab_0
-  - async-timeout=4.0.2=pyhd8ed1ab_0
+  - argcomplete=3.1.1
   - attrs=23.1.0=pyh71513ae_1
-  - bc=1.07.1=h7f98852_0
-  - bcftools=1.15=haf5b3da_0
-  - binutils_impl_linux-64=2.39=he00db2b_1
-  - binutils_linux-64=2.39=h5fc0e48_13
+  - bc=1.07.1
+  - bcftools=1.15
   - bioconductor-annotationdbi=1.56.2=r41hdfd78af_0
   - bioconductor-biobase=2.54.0=r41hc0cfd56_2
   - bioconductor-biocfilecache=2.2.0=r41hdfd78af_0
@@ -46,19 +37,14 @@ dependencies:
   - bioconductor-zlibbioc=1.40.0=r41hc0cfd56_2
   - boost-cpp=1.74.0=h6cacc03_7
   - boto=2.49.0=py_0
-  - brotlipy=0.7.0=py39hb9d737c_1005
   - bwidget=1.9.14=ha770c72_1
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.19.1=hd590300_0
-  - ca-certificates=2023.5.7=hbcca054_0
   - cachetools=5.3.1=pyhd8ed1ab_0
   - cairo=1.16.0=ha12eb4b_1010
   - certifi=2023.5.7=pyhd8ed1ab_0
-  - cffi=1.15.1=py39he91dace_3
   - charset-normalizer=3.1.0=pyhd8ed1ab_0
   - conda-pack=0.7.0=pyh6c4a22f_0
-  - crcmod=1.7=py39hb9d737c_1009
-  - cryptography=39.0.0=py39hd598818_0
   - curl=7.86.0=h7bff187_1
   - distro=1.8.0=pyhd8ed1ab_0
   - expat=2.5.0=hcb278e6_1
@@ -73,7 +59,6 @@ dependencies:
   - freebayes=1.3.6=h346b5cb_1
   - freetype=2.12.1=hca18f0e_1
   - fribidi=1.0.10=h36c2ea0_0
-  - frozenlist=1.3.3=py39hb9d737c_0
   - gatk4=4.3.0.0=py36hdfd78af_0
   - gcc_impl_linux-64=10.4.0=h5231bdf_19
   - gcc_linux-64=10.4.0=h9215b83_13
@@ -133,19 +118,16 @@ dependencies:
   - libstdcxx-devel_linux-64=10.4.0=hd38fd1e_19
   - libstdcxx-ng=13.1.0=hfd8a6a1_0
   - libtiff=4.4.0=h0e0dad5_3
-  - libuuid=2.38.1=h0b41bf4_0
   - libwebp-base=1.3.0=h0b41bf4_0
   - libxcb=1.13=h7f98852_1004
   - libxml2=2.9.14=haae042b_4
   - libzlib=1.2.13=hd590300_5
   - make=4.3=hd18ef5c_1
   - monotonic=1.5=py_0
-  - multidict=6.0.4=py39h72bdee0_0
   - ncurses=6.4=hcb278e6_0
   - oauth2client=4.1.3=py_0
   - octopus=0.7.4=ha3c1580_2
   - openjdk=11.0.1=h516909a_1016
-  - openssl=1.1.1u=hd590300_0
   - pango=1.50.7=hbd2fdc8_0
   - parallel=20170422=pl5.22.0_0
   - pcre2=10.37=hc3806b6_1
@@ -158,12 +140,9 @@ dependencies:
   - pycparser=2.21=pyhd8ed1ab_0
   - pyopenssl=23.2.0=pyhd8ed1ab_1
   - pyparsing=3.1.0=pyhd8ed1ab_0
-  - pysam=0.20.0=py39h9abd093_0
+  - pysam
   - pysocks=1.7.1=pyha2e5f31_6
-  - python=3.9.15=h47a2c10_0_cpython
-  - python_abi=3.9=3_cp39
-  - pyu2f=0.1.5=pyhd8ed1ab_0
-  - pyyaml=6.0=py39hb9d737c_5
+  - python=3
   - r-askpass=1.1=r41h06615bd_3
   - r-assertthat=0.2.1=r41hc72bb7e_3
   - r-base=4.1.3=hd930d0e_0
@@ -246,41 +225,8 @@ dependencies:
   - setuptools=68.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
   - sysroot_linux-64=2.12=he073ed8_15
-  - tabixpp=1.1.0=hb264ae4_8
-  - tk=8.6.12=h27826a3_0
-  - tktable=2.10=hb7b940f_3
-  - toml=0.10.2=pyhd8ed1ab_0
-  - tomlkit=0.11.8=pyha770c72_0
-  - typing-extensions=4.7.1=hd8ed1ab_0
-  - typing_extensions=4.7.1=pyha770c72_0
-  - tzdata=2023c=h71feb2d_0
   - urllib3=1.26.15=pyhd8ed1ab_0
   - vcflib=1.0.3=hecb563c_1
-  - wheel=0.40.0=pyhd8ed1ab_0
-  - xmltodict=0.13.0=pyhd8ed1ab_0
-  - xorg-fixesproto=5.0=h7f98852_1002
-  - xorg-inputproto=2.3.2=h7f98852_1002
-  - xorg-kbproto=1.0.7=h7f98852_1002
-  - xorg-libice=1.0.10=h7f98852_0
-  - xorg-libsm=1.2.3=hd9c2040_1000
-  - xorg-libx11=1.8.4=h0b41bf4_0
-  - xorg-libxau=1.0.11=hd590300_0
-  - xorg-libxdmcp=1.1.3=h7f98852_0
-  - xorg-libxext=1.3.4=h0b41bf4_2
-  - xorg-libxfixes=5.0.3=h7f98852_1004
-  - xorg-libxi=1.7.10=h7f98852_0
-  - xorg-libxrender=0.9.10=h7f98852_1003
-  - xorg-libxt=1.3.0=hd590300_0
-  - xorg-libxtst=1.2.3=h7f98852_1002
-  - xorg-recordproto=1.14.2=h7f98852_1002
-  - xorg-renderproto=0.11.1=h7f98852_1002
-  - xorg-xextproto=7.3.0=h0b41bf4_1003
-  - xorg-xproto=7.0.31=h7f98852_1007
-  - xz=5.2.6=h166bdaf_0
   - yaml=0.2.5=h7f98852_2
-  - yarl=1.9.2=py39hd1e30aa_0
-  - yq=3.2.2=pyhd8ed1ab_0
-  - zlib=1.2.13=hd590300_5
-  - zstd=1.5.2=h3eb15da_6
 prefix: "/opt/conda"
 
