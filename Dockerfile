@@ -27,6 +27,9 @@ RUN if [ -n "$RENKU_VERSION" ] ; then \
 
 FROM renku/renkulab-bioc:RELEASE_3_17-0.17.0
 
+# Add VSCode support for a more pleasant coding and debugging experience for .py files. More details about issues, comments, and automatically installing extensions on https://renku.discourse.group/t/using-visual-studio-code-in-renkulab-interactive-sessions/249.
+RUN curl -s https://raw.githubusercontent.com/SwissDataScienceCenter/renkulab-docker/master/scripts/install-vscode.sh | bash
+
 # Uncomment and adapt if code is to be included in the image
 # COPY src /code/src
 
@@ -34,20 +37,34 @@ FROM renku/renkulab-bioc:RELEASE_3_17-0.17.0
 # e.g. the following installs apt-utils and vim; each pkg on its own line, all lines
 # except for the last end with backslash '\' to continue the RUN line
 #
-# USER root
-# RUN apt-get update && \
-#    apt-get install -y --no-install-recommends \
-#    apt-utils \
-#    vim
-# USER ${NB_USER}
+USER root
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    apt-utils \
+    bash-completion \
+    vim \
+    jq \
+    less \
+    wget \
+    curl \
+    unzip \
+    bzip2 \
+    python3-opencv && \
+    apt-get -y clean && \
+    apt-get -y autoclean  && \
+    apt-get -y autoremove
+
+USER ${NB_USER}
 
 # install the R dependencies
 COPY install.R /tmp/
 RUN R -f /tmp/install.R
 
 # install the python dependencies
-COPY requirements.txt /tmp/
-RUN pip3 install -r /tmp/requirements.txt --no-cache-dir && \
-    rm -rf ${HOME}/.renku/venv
+COPY requirements.txt environment.yml /tmp/
+RUN mamba env update -q -f /tmp/environment.yml && \
+    /opt/conda/bin/pip install -r /tmp/requirements.txt --no-cache-dir && \
+    mamba clean -y --all && \
+    mamba env export -n "root"
 
 COPY --from=builder ${HOME}/.renku/venv ${HOME}/.renku/venv
