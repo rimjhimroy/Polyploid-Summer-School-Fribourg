@@ -2,7 +2,7 @@
 10-20 July
 University of Fribourg
 
-This is the Renku project for the Polyploid Summer School 2023 (https://events.unifr.ch/summerschool_polyploidy/en/). Renku project is basically a git repository with some bells and whistles. You'll find we have already created some useful things like `data` and `notebooks` directories and a `Dockerfile`.
+This is the Renku project for the [Polyploid Summer School 2023](https://events.unifr.ch/summerschool_polyploidy/en/). Renku project is basically a git repository with some bells and whistles. You'll find we have already created some useful things like `data` and `notebooks` directories and a `Dockerfile`.
 
 
 ## Quick Renku instructions:
