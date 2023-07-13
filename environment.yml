@@ -3,6 +3,7 @@ channels:
   - defaults
   - bioconda
   - conda-forge
+  - anaconda
 dependencies:
   - bc
   - bcftools
@@ -23,5 +24,6 @@ dependencies:
   - hifiasm
   - minimap2
   - purge_dups
+  - pandas
 prefix: "/opt/conda"
 
