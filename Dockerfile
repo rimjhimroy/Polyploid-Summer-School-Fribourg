@@ -62,7 +62,8 @@ RUN R -f /tmp/install.R
 
 # install the python dependencies
 COPY requirements.txt assembly.yml environment.yml  /tmp/
-RUN mamba create -n assembly -q -f /tmp/assembly.yml
+RUN conda create -n assembly
+RUN mamba env update -n assembly -q -f /tmp/assembly.yml
 RUN mamba env update -q -f /tmp/environment.yml && \
     /opt/conda/bin/pip install -r /tmp/requirements.txt --no-cache-dir && \
     mamba clean -y --all && \
