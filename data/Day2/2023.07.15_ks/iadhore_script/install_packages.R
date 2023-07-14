@@ -1,0 +1,5 @@
+install.packages("data.table")
+install.packages("argparse")
+install.packages("dplyr")
+install.packages("vroom")
+install.packages("tools")
