@@ -10,3 +10,11 @@ data/Day1/ds2/ds2_hifi.fastq.gz filter=lfs diff=lfs merge=lfs -text
 data/Day1/ds1/ds1_hic_read1.fq filter=lfs diff=lfs merge=lfs -text
 data/Day1/ds1/tmp.kmc_suf filter=lfs diff=lfs merge=lfs -text
 data/Day1/ds1/tmp.kmc_pre filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/data/Asparagus.gff filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/wgd_script/Elaeis.fa filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/wgd_script/Elaeis.gff filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/data/Asparagus.fa filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/data/Elaeis.fa filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/data/Elaeis.gff filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/data/Ananas.fa filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/data/Ananas.gff filter=lfs diff=lfs merge=lfs -text
