@@ -18,3 +18,9 @@ data/Day2/2023.07.15_ks/data/Elaeis.fa filter=lfs diff=lfs merge=lfs -text
 data/Day2/2023.07.15_ks/data/Elaeis.gff filter=lfs diff=lfs merge=lfs -text
 data/Day2/2023.07.15_ks/data/Ananas.fa filter=lfs diff=lfs merge=lfs -text
 data/Day2/2023.07.15_ks/data/Ananas.gff filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/wgd/Elaeis.gff filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/wgd/Elaeis.fa filter=lfs diff=lfs merge=lfs -text
+5920cd73-42c1-4437-9abc-a6c11acbebc9/Elaeis.fa.tfa filter=lfs diff=lfs merge=lfs -text
+src/diamond filter=lfs diff=lfs merge=lfs -text
+src/diamond-linux64.tar.gz filter=lfs diff=lfs merge=lfs -text
+data/Day2/2023.07.15_ks/wgd/6cd329ad-f054-43c7-bb1d-e7b6e0423516/Elaeis.fa.tfa filter=lfs diff=lfs merge=lfs -text
