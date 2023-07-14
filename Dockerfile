@@ -61,7 +61,7 @@ COPY install.R /tmp/
 RUN R -f /tmp/install.R
 
 # install the python dependencies
-COPY requirements.txt assembly.yml environment.yml  /tmp/
+COPY requirements.txt assembly.yml environment.yml wgd.yml ksrates.yml  /tmp/
 RUN conda create -n assembly
 RUN mamba env update -n assembly -q -f /tmp/assembly.yml
 RUN mamba env update -q -f /tmp/environment.yml && \

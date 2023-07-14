@@ -1,0 +1,15 @@
+name: wgd
+channels:
+  - bioconda
+  - conda-forge
+  - thiesgehrmann
+dependencies:
+ - iadhore
+ - paml
+ - mcl
+ - mafft
+ - fasttree
+ - phyml
+ - muscle
+ - blast
+prefix: /opt/conda/envs/wgd
