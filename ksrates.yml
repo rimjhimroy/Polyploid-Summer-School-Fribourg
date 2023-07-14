@@ -5,7 +5,7 @@ channels:
   - thiesgehrmann
 dependencies:
  - iadhore
- - paml
+ - paml=4.9
  - mcl
  - mafft
  - fasttree

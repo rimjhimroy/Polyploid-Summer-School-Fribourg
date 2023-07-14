@@ -5,6 +5,7 @@ channels:
   - conda-forge
   - anaconda
 dependencies:
+  - conda-forge::ncurses
   - bc
   - bcftools
   - bzip2
@@ -26,5 +27,6 @@ dependencies:
   - purge_dups
   - pandas
   - biopython
+  - htop
 prefix: "/opt/conda"
 

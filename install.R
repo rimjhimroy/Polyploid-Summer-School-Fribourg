@@ -6,7 +6,8 @@ install.packages("tidyverse")
 install.packages("optparse")
 install.packages("gridExtra")
 install.packages("purrr")
-install.packages(c("car","agricolae","lme4","VennDiagram"))
+install.packages("vcfR")
+install.packages(c("car","agricolae","lme4","VennDiagram","data.table","apercu"))
 
 
 
