@@ -63,7 +63,7 @@ RUN R -f /tmp/install.R
 # install the python dependencies
 COPY requirements.txt assembly.yml environment.yml wgd.yml ksrates.yml REC_env.yml /tmp/
 RUN conda create -n assembly && \
-    mamba env update -n assembly-q -f /tmp/assembly.yml
+    mamba env update -n assembly -f /tmp/assembly.yml
 
 RUN conda create -n wgd python=3.8 && \
     mamba env update -n wgd -q -f /tmp/wgd.yml && \
@@ -81,8 +81,7 @@ RUN mamba env update -q -f /tmp/environment.yml && \
 RUN conda create -n ksrates python=3.8 && \
     mamba env update -n ksrates -q -f /tmp/ksrates.yml 
 RUN git clone --depth 1 https://github.com/VIB-PSB/ksrates
-RUN cd ksrates
-RUN /opt/conda/envs/ksrates/bin/pip install .
+
 
 
 
