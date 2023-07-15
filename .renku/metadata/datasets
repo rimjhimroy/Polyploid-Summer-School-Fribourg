@@ -15,7 +15,7 @@
                   "day-1-genome-assembly-and-kmer-spectrum",
                   {
                     "@renku_data_type": "renku.domain_model.dataset.Dataset",
-                    "@renku_oid": "aa5064da25c8d857ad45d6c63ce68c0ea6b00e9f562a969d756f224c1d7f22f9",
+                    "@renku_oid": "fdb88cdc65759322e808c59917b8845997b683c9e51fda41e5d3c13dee776df0",
                     "@renku_reference": true
                   }
                 ]
