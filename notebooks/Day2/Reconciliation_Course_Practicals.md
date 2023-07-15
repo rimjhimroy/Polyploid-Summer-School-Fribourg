@@ -1,4 +1,3 @@
-
 # Gene Tree - Species Tree Reconciliation
 Created by: Paul Simion, Rimjhim Choudhury
 Date: 2023-07-15
@@ -112,7 +111,8 @@ Was the comparison between the 2 constrained topology OK/sensible/legitimate ?
 **Protocol**
 
 1. Inference of a species tree based using a set of gene trees. We pre-computed phylogenetic trees for some of the (many) sets of sequences outputed by *orthofinder2*. These 2,034 gene trees are located in the `Orthogroups_trees_60-80seq_25sp` folder. Note that you are now able to infer all these trees by yourself :)
-In order to us *GeneRax*, and particularly its *SpeciesRax* function, we need to build the necessary input files that the software needs. First, we will produce the `family` file (here, using only input gene trees).
+In order to us *GeneRax*, and particularly its *SpeciesRax* function, we need to build the necessary input files that the software needs. First, we will produce the `family` file (here, using only input gene trees). For this, you will have to download the 'build_family_file.py' from *GeneRax* github page (https://github.com/BenoitMorel/GeneRax).
+
 ```
 tree_folder=Orthogroups_trees_60-80seq_25sp
 output_file=orthogroups_family_2034.file
