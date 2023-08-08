@@ -17,8 +17,13 @@ Date: 2023-07-15
 
 A set of 28 species have been selected and their proteomes have been downloaded from then *ENSEMBL plants* ftp repository. Then, *Orthofinder2* was used in order to build sets of homologous sequences (i.e. both orthologous and paralogous). These sets of homologous sequences have then been filtered based on number of species and number of sequences thresholds (in order to facilitate the subsequent analyses, gaining time and using less electricity). For example, if a folder is named `20-28seq_20sp`, this means that the clusters of homologous sequences contain between 20 to 28 sequences and at least 20 different species.
 
-input files location: `/data/courses/pploidy/reconciliation/`
-REC_env environment location: `/home/psimion/.conda/envs/REC_env`
+input files location: 
+```bash
+wget -O Day2.zip https://drive.switch.ch/index.php/s/N97Fpkvpu56bY4Q/download
+unzip Day2.zip
+ls reconciliation
+```
+Conda environment: `conda activate REC_env`
 
 
 ###################################
@@ -32,20 +37,11 @@ REC_env environment location: `/home/psimion/.conda/envs/REC_env`
 - *iTOL* (https://itol.embl.de/upload.cgi)
 
 **Protocol**
-Using input fasta files of unaligned sequences, we will use *mafft* to align the sequences and then use *iqtree* to infer the gene tree based on the aligned sequences. input fasta files are located here: `/data/courses/pploidy/reconciliation/Practical1/orthofinder_output_seqs_20-28seq_20sp`. 
+Using input fasta files of unaligned sequences, we will use *mafft* to align the sequences and then use *iqtree* to infer the gene tree based on the aligned sequences. input fasta files are located here: `reconciliation/Practical1/orthofinder_output_seqs_20-28seq_20sp`. 
 
 1. Randomly select one of these fasta files and proceed with the preparation of your script that you will use to launch jobs on the cluster.
-```
+```bash
 #!/bin/bash
-#SBATCH --job-name=single_gene_inference
-#SBATCH --output=single_gene_inference_%j.out
-#SBATCH --error=single_gene_inference_%j.err
-#SBATCH --time=00:30:00			# max runtime allowed
-#SBATCH --mem=1G			     	# max allocated memory 
-#SBATCH --cpus-per-task=4 		# number of threads
-#SBATCH --partition=pploidy 	# which cluster partition to use
-
-module load Conda/miniconda/latest
 conda activate REC_env
 
 # Multiple Sequence Alignment (with mafft)
@@ -54,11 +50,11 @@ mafft --thread 4 --auto --anysymbol [InputFile] > [AlignedFile]
 iqtree -T 4 -s [AlignedFile] -b 10 -m [MODEL] -pre [OUPUT]
 
 conda deactivate
-   ```
+```
 
-2. Then, submit the job using the following command: `sbatch [NameOfYourScript]`. Among the output files, the finalized gene tree infered has a `.treefile` extension. You can print its content using `cat [OUTPUT.treefile]`, and then copy-paste it on the web-server tool *iTOL* in order to get a nice visualization of the gene tree: https://itol.embl.de/upload.cgi. 
+2. Then, submit the job using the following command: `bash [NameOfYourScript]`. Among the output files, the finalized gene tree infered has a `.treefile` extension. You can print its content using `cat [OUTPUT.treefile]`, and then copy-paste it on the web-server tool *iTOL* in order to get a nice visualization of the gene tree: https://itol.embl.de/upload.cgi. 
 
-3. Now, infer and visualize the gene tree for one randomly chosen gene from the `/data/courses/pploidy/reconciliation/Practical1/orthofinder_output_seqs_20-80seq_20sp` folder. For this, you will have to re-do steps 1 and 2 above and changing the `InputFile`.
+3. Now, infer and visualize the gene tree for one randomly chosen gene from the `reconciliation/Practical1/orthofinder_output_seqs_20-80seq_20sp` folder. For this, you will have to re-do steps 1 and 2 above and changing the `InputFile`.
 
 4. Bonus: Many different sequence evolution models exists from simplistic to quite complex ones (http://www.iqtree.org/doc/Substitution-Models#protein-models, http://www.iqtree.org/doc/Complex-Models). Feel free to test different models to see if (and how) they impact the resulting gene trees. The simplest and least realistic model is the `JC69` model. The evolution model `GTR20+C60+R8+F*H4` is an example of a very complex one. Frequently used models include `LG+G4+F` and `GTR20+R4+F`.
 
@@ -75,7 +71,7 @@ Take some time to look at the gene(s) tree(s) you obtained. Are they identical w
 
 **Protocol**
 
-1. First, infer the phylogenetic tree of both alignments `gene_A.fas` and `gene_B.fas`, as in Practical 1 (except that the sequences have already been aligned). They are localized in the folder `/data/courses/pploidy/reconciliation/Practical2/`. After observing their gene trees using *iTOL*, find the incongruences between them, and discuss what could have caused these incongruences.
+1. First, infer the phylogenetic tree of both alignments `gene_A.fas` and `gene_B.fas`, as in Practical 1 (except that the sequences have already been aligned). They are localized in the folder `reconciliation/Practical2/`. After observing their gene trees using *iTOL*, find the incongruences between them, and discuss what could have caused these incongruences.
 
 2. Comparing the topological distance between trees: we will compute the normalized quartet distance between the gene tree `gene_C.tre` (already infered from OG0010236) and the two species tree given `species_tree_1.tre` and `species_tree_2.tre` . For this, we will use *tqdist* and its `quartet_dist` function. Don't forget, as in Practical 1, to load the conda module and to activate the `REC_env` conda environment before running tdqist.
 ```
@@ -112,6 +108,9 @@ Was the comparison between the 2 constrained topology OK/sensible/legitimate ?
 
 1. Inference of a species tree based using a set of gene trees. We pre-computed phylogenetic trees for some of the (many) sets of sequences outputed by *orthofinder2*. These 2,034 gene trees are located in the `Orthogroups_trees_60-80seq_25sp` folder. Note that you are now able to infer all these trees by yourself :)
 In order to us *GeneRax*, and particularly its *SpeciesRax* function, we need to build the necessary input files that the software needs. First, we will produce the `family` file (here, using only input gene trees). For this, you will have to download the 'build_family_file.py' from *GeneRax* github page (https://github.com/BenoitMorel/GeneRax).
+```bash
+git clone https://github.com/BenoitMorel/GeneRax
+```
 
 ```
 tree_folder=Orthogroups_trees_60-80seq_25sp
@@ -151,64 +150,3 @@ Finally, *seaview* allows to use *Treerecs* directly on a given gene and also ou
 
 
 
-#####################
-## Useful Information
-
-# Data access and Resource allocation
-Please note the following information regarding data access and resource allocation on the cluster:
-
-1. Data Access:
-   - The data for the Summer school practical sessions are located in the directory: /data/courses/pploidy/
-   - Students are in the Unix group `pploidystudents` have read-only permissions for these data.
-
-2. User Quotas:
-   - Each student and user has a 4TB quota to write into the directory /data/users/loginname.
-   - Each student and user has a 20GB quota to write into the directory /home/loginname.
-   - Use the `lsquota` command to view the individual quota usage.
-
-3. Cluster Resources:
-   - The Slurm partition for the cluster is named `pploidy`.
-   - The `pploidy` partition has 128 CPUs reserved.
-   - The `pploidy` partition has 512 GB of RAM.
-
-# Submitting and Monitoring jobs on the IBU cluster
-You can create a job script to submit jobs on the cluster. The job script contains the commands that you would like to run on the cluster. You can submit the job script using the `sbatch` command. The job will be added to the queue and will be executed when the resources are available. You can check the status of the job using the `squeue` or `sacct` commands. You can cancel the job using the `scancel` command.
-
-1. Example on how to create a job submission script (e.g. `job_to_submit.sh`), which is a text file with content such as follows:
-   ```
-   #!/bin/bash
-
-   # set several important sbatch variable
-   #SBATCH --job-name=polyploid_genotyping
-   #SBATCH --output=polyploid_genotyping_%j.out
-   #SBATCH --error=polyploid_genotyping_%j.err
-   #SBATCH --time=00:30:00
-   #SBATCH --mem=10G
-   #SBATCH --cpus-per-task=1
-   #SBATCH --partition=pploidy
-
-   # Load conda module
-   module load Conda/miniconda/latest
-
-   # Activate a Conda environment
-   conda activate [EnvironmentName]
-
-   # Run the command (archetypical example)
-   ToolName -i [InputFile] -t [NumberOfThreads] -o [Outputfile]
-   ```
-2. Submit the job using the `sbatch` command:
-   ```
-   sbatch submit.sh
-   ```
-3. Check the status of the job using the `squeue` command:
-   ```
-   squeue -u <your-username>
-   ```
-4. Check the status of the job using the `sacct` command:
-   ```
-   sacct -j <job-id>
-   ```
-5. Cancel the job using the `scancel` command:
-   ```
-   scancel <job-id>
-   ```

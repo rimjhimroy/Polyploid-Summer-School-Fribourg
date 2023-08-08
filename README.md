@@ -1,8 +1,126 @@
-# Polyploid Summer School 2023
+# Summer School on Polyploid evolutionary genomics, 2023
 10-20 July
-University of Fribourg
+[University of Fribourg](https://events.unifr.ch/summerschool_polyploidy/en/)
 
-This is the Renku project for the [Polyploid Summer School 2023](https://events.unifr.ch/summerschool_polyploidy/en/). Renku project is basically a git repository with some bells and whistles. You'll find we have already created some useful things like `data` and `notebooks` directories and a `Dockerfile`.
+![Summer School](https://www.ville-fribourg.ch/sites/default/files/2018-06/vue_planche_sup.jpg)
+
+## Introduction:
+Welcome to the Summer School on Polyploid evolutionary genomics, 2023 held at the University of Fribourg, Switzerland! This renku server provides you with a comprehensive guide and platform to follow to our specialized summer school practical session focused on various aspects of polyploidy research. Here, you will find details about the schedule, daily contents, and the esteemed instructors leading the exciting topics of the course.
+
+## Schedule:
+
+#### Day 1: 
+**Afternoon**
+- **Date:** July 14, 2023
+- **Time:** 13:30
+- **Instructor:** [Dr. Quinten Bafort](https://www.vandepeerlab.org/people/qubaf), [Dr. Zhen Li](https://www.vandepeerlab.org/people/zheli)
+- **Topic:** Assembly of polyploid genomes and subgenome evolution
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day1/Assembly_of_polyploid_genomes.md)
+- **Contents:**
+  - Participants will learn about the extra complexities of (the assembly of) polyploid genomes that consist of (very) similar or identical subgenomes. 
+  - Participants will learn about how to look for evidence of subgenome dominance, and ongoing rediploidization.
+  
+#### Day 2: 
+**Morning**
+- **Date:** July 15, 2023
+- **Time:** 8.30
+- **Instructor:** [Dr. Zhen Li](https://www.vandepeerlab.org/people/zheli), [Dr. Quinten Bafort](https://www.vandepeerlab.org/people/qubaf)
+- **Topic:** Ks age distribution and genomic dot plots
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day2/Ks_age_distribution_and_genomic_dot_plots.md)
+- **Contents:**
+  - The construction of Ks age distributions and genomic dot plots are two of the most widely used and important ways to find evidence for ancient polyploidy. 
+  - Where the construction of Ks distributions is not based on structural information and can be even based on extensive transcriptome information, the construction of genomic dot plots requires structural information and a well-assembled genome.
+
+**Afternoon**
+- **Date:** July 15, 2023
+- **Time:** 13.30
+- **Instructor:** [Dr. Paul Simion](https://ecobio.univ-rennes.fr/interlocuteurs/paul-simion), [Dr. Zhen Li](https://www.vandepeerlab.org/people/zheli), [Dr. Quinten Bafort](https://www.vandepeerlab.org/people/qubaf)
+- **Topic:** Gene trees – species tree reconciliation
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day2/Reconciliation_Course_Practicals.md)
+- **Contents:**
+  - Gene tree reconciliation enables to look for evidence for (very) ancient polyploidy, where this is often not possible with Ks age distributions, because of saturation of synonymous mutations for large evolutionary distances. 
+  - Participants will learn to work with software to construct Ks age distributions, to make genomic
+dot plots, and to perform gene tree – species tree reconciliation.
+  
+#### Day 3: 
+**Morning**
+- **Date:** July 17, 2023
+- **Time:** 8.30
+- **Instructor:** [Prof. Kentaro Shimizu](https://www.ieu.uzh.ch/en/staff/member/shimizu_kentaro.html), [Dr Masaomi Hatakeyama](https://www.ieu.uzh.ch/en/staff/member/hatakeyama_masaomi.html), [Dr. Moeko Okada](https://moekookada.github.io)
+- **Topic:** RNA-seq analysis using subgenome classification methods
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day3/Homeologous_expression_analysis.md)
+- **Contents:**
+  - For high quality RNA-seq analysis of allopolyploid species, bioinformatic workflows called subgenome classification methods were developed. 
+  - We will introduce bioinformatic workflow for subgenome classification methods (HomeoRoq, EAGLE-RC) combined with RNA-seq mapping and quantification tools.
+  - We also focus on significant changes in homeolog expression ratio.
+  
+**Afternoon**
+- **Date:** July 17, 2023
+- **Time:** 13.30
+- **Instructor:** [Prof. Kentaro Shimizu](https://www.ieu.uzh.ch/en/staff/member/shimizu_kentaro.html), [Dr Masaomi Hatakeyama](https://www.ieu.uzh.ch/en/staff/member/hatakeyama_masaomi.html), [Dr. Moeko Okada](https://moekookada.github.io)
+- **Topic:** Robustness of polyploid species
+- **Contents:**
+  - Recent studies using several allopolyploid species showed that allopolyploid species inherited and combined the gene expression patterns of progenitor species. 
+  - We suggest that they contributed to the environmental robustness of allopolyploid species.
+  
+### Day 4: 
+**Morning**
+- **Date:** July 18, 2023
+- **Time:** 8.30
+- **Instructor:** [Dr. Armel Salmon](https://ecobio.univ-rennes.fr/en/interlocutors/armel-salmon), [Dr. Rimjhim Roy Choudhury](https://rimjhimroy.github.io), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
+- **Topic:** Genotyping polyploids
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day4/SNP_calling_polyploids.md)
+- **Contents:**
+  - Genotyping polyploids is challenging. Participants will learn about avoidable pitfalls when calling for single nucleotide polymorphisms as well as structural variants among polyploid samples and about strategies to accurately assess (fixed or partial) heterozygotes. 
+  
+**Afternoon**
+- **Date:** July 18, 2023
+- **Time:** 13.30
+- **Instructor:** [Dr. Sandra Grünig](https://www.unifr.ch/directory/fr/people/342164/fd61e), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
+- **Topic:** Autopolyploid populations
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day4/Autopolyploid_populations.md)
+- **Contents:**
+  - Participants will learn how to assess tetrasomic inheritance and to compare the linkage and structure of genomic variation within and among populations of diploid-autotetraploid systems. 
+  
+### Day 5:
+**Morning** 
+- **Date:** July 19, 2023
+- **Time:** 8.30
+- **Instructor:** [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825), [Dr Mathieu Tiret](https://www6.val-de-loire.inrae.fr/biofora/Personnel/Ils-ont-travaille-a-BioForA/TIRET-Mathieu)
+- **Topic:** Allopolyploid populations
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day5/Polyploidy_Cbp.Rmd)
+- **Contents:**
+  - Participants will learn how to deal with genomic variation in allopolyploid systems that include wholegenome duplication and hybridization, with the latter that seems to matter more than the former, at least for expression. 
+  
+**Afternoon**
+- **Date:** July 19, 2023
+- **Time:** 13.30
+- **Instructor:** [Dr Mathieu Tiret](https://www6.val-de-loire.inrae.fr/biofora/Personnel/Ils-ont-travaille-a-BioForA/TIRET-Mathieu), [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825)
+- **Topic:** Allopolyploid populations
+- **Contents:**
+  - Participants will learn that parental legacy plays an important role and seems to have a rather long-lasting effect. 
+  - So to understand an allopolyploid we need to understand its parental species. Although allopolyploid subgenomes have been in the same individuals for a long time and therefore have had the same demography they still differ significantly.
+  
+### Day 6: 
+**Morning**
+- **Date:** July 19, 2023
+- **Time:** 8.30
+- **Instructor:** [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825), [Dr Mathieu Tiret](https://www6.val-de-loire.inrae.fr/biofora/Personnel/Ils-ont-travaille-a-BioForA/TIRET-Mathieu)
+- **Topic:** Signatures of selection
+- **Contents:**
+  - Participants will learn to analyze patterns of selection and highlight selective sweeps in allopolyploids.
+  
+**Afternoon**
+- **Date:** July 19, 2023
+- **Time:** 8.30
+- **Instructor:** [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
+- **Topic:** Interpretations and conclusions”
+- **Contents:**
+  - Participants will revisit hypotheses formulated at the beginning of the summer school in light of the approaches they have been practicing and highlight perspectives for polyploidy research at the population level. 
+  
+  
+  
+This is the Renku project for the [Polyploid Summer School 2023](https://events.unifr.ch/summerschool_polyploidy/en/). Renku is a platform developed by the Swiss Data Science Center. It is a joint effort of ETH Zurich and EPFL Lausanne to provide reproducible computational environments for collaborating on data science research for teaching. Renku project is basically a git repository with some bells and whistles. You'll find we have already created some useful things like `data` and `notebooks` directories and a `Dockerfile`.
 
 
 ## Quick Renku instructions:
@@ -13,7 +131,7 @@ This is the Renku project for the [Polyploid Summer School 2023](https://events.
 3. Near the top right, click on the button to fork the project; this should bring up a box where you can modify the name (you don't need to) and you can click on the 'Fork' button, putting you on the landing page of your (new) project.
 4. There are a few ways of initiating a session. The one-click Start button uses all the default settings to initiate a session. You can also click on the drop-down menu next to the start and select "stat with options". Here is a detailed guide on how to start an interactive session: https://renku.readthedocs.io/en/latest/tutorials/first_steps/02_start_an_interactive_session.html 
 5. Once you click on start, hopefully it shows "Docker image available"; if not, perhaps it says "Docker Image building", which is also ok (it might take a couple of minutes to build and then turn to "Docker image available"). 
-6. For Python, command line work, and for people who are fan of VSCode, select /lab; for R work in Rstudio, select, /rstudio (you can always switch back and forth). Leave the number of CPUs at 2 and Memory at 8G and storage 64G. Click 'Start environment'. This may take a couple minutes to boot up. 
+6. For Python, command line work, and for people who are fan of VSCode, and for a virtual desktop VNC, select /lab; for R work in Rstudio, select, /rstudio (you can always switch back and forth). Leave the number of CPUs at 2 and Memory at 8G and storage 64G. Click 'Start environment'. This may take a couple minutes to boot up. 
 
 Note: you can always go back and forth between the `/rstudio`, `/lab`, and `/vscode` environments by modifying the end of web link, e.g., if you started in /rstudio, but want to move to /lab, you can remove "rstudio", type "lab" in its place and then press enter.
 
@@ -22,35 +140,26 @@ Note: you can upload files from the local computer into your environment via the
 
 ## Working with Renku
 
-Please see [the documentation](https://renku.readthedocs.io/en/latest/) for 
-more details about Renku.
+Please see [the documentation](https://renku.readthedocs.io/en/latest/) for more details about Renku.
 
 
 ## Working with the project
 
-The simplest way to start your project is right from the Renku
-platform - just click on the `Sessions` tab and start a new session.
-This will start an interactive environment right in your browser.
+The simplest way to start your project is right from the Renku platform - just click on the `Sessions` tab and start a new session. This will start an interactive environment right in your browser.
 
-To work with the project anywhere outside the Renku platform,
-click the `Settings` tab where you will find the
-git repo URLs - use `git` to clone the project on whichever machine you want.
+To work with the project anywhere outside the Renku platform, click the `Settings` tab where you will find the git repo URLs - use `git` to clone the project on whichever machine you want.
 
 ### Changing interactive session dependencies
 
-Initially we install a very minimal set of packages to keep the images small.
-However, you can add python and conda packages in `requirements.txt` and
-`environment.yml`, and R packages to `install.R` (listed as, for example,
-`install.packages("ggplot2")`), to your heart's content. If you need more fine-grained
-control over your environment, please see [the documentation](https://renku.readthedocs.io/en/stable/topic-guides/customizing-sessions.html).
+Initially we install a very minimal set of packages to keep the images small. However, you can add python and conda packages in `requirements.txt` and `environment.yml`, and R packages to `install.R` (listed as, for example, `install.packages("ggplot2")`), to your heart's content. If you need more fine-grained control over your environment, please see [the documentation](https://renku.readthedocs.io/en/latest/reference/templates.html).
 
 ## Project configuration
 
-Project options can be found in `.renku/renku.ini`. In this
-project there is currently only one option, which specifies
-the default type of environment to open, in this case `/rstudio`.
+Project options can be found in `.renku/renku.ini`. In this project there is currently three options, which specifies the default type of environment to open
+`/rstudio` for Rstudio.
+`/vnc` for the virtual desktop. 
+`/lab` for JupyterLab interface with rstudio, vnc jupyterlab and vscode.
 
 ## Moving forward
 
-Once you feel at home with your project, we recommend that you replace
-this README file with your own project documentation! Happy data wrangling!
+Once you feel at home with your project, we recommend that you replace this README file with your own project documentation! Happy data wrangling!

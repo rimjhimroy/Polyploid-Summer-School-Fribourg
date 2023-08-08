@@ -1,30 +1,5 @@
 {
   "@renku_data_type": "renku.infrastructure.database.RenkuOOBTree",
-  "@renku_data_value": {
-    "@renku_data_type": "builtins.tuple",
-    "@renku_data_value": [
-      {
-        "@renku_data_type": "builtins.tuple",
-        "@renku_data_value": [
-          {
-            "@renku_data_type": "builtins.tuple",
-            "@renku_data_value": [
-              {
-                "@renku_data_type": "builtins.tuple",
-                "@renku_data_value": [
-                  "/datasets/a1d4c39175354310a4e25778ceb83e40",
-                  {
-                    "@renku_data_type": "renku.domain_model.dataset.Dataset",
-                    "@renku_oid": "41b30673da44d10dac34aa126261f356c3d9bfb448074e2f78bb5a1b3fa7c326",
-                    "@renku_reference": true
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
+  "@renku_data_value": null,
   "@renku_oid": "datasets-provenance-tails"
 }

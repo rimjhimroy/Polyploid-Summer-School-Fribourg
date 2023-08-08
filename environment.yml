@@ -1,32 +1,7 @@
 name: "base"
 channels:
   - defaults
-  - bioconda
-  - conda-forge
-  - anaconda
-dependencies:
-  - conda-forge::ncurses
-  - bc
-  - bcftools
-  - bzip2
-  - freebayes
-  - gatk4
-  - octopus
-  - parallel
-  - pysam
-  - rtg-tools
-  - samtools
-  - sed
-  - vcflib
-  - yaml
-  - kmc
-  - smudgeplot
-  - genomescope2
-  - hifiasm
-  - minimap2
-  - purge_dups
-  - pandas
-  - biopython
-  - htop
+# dependencies:
+# - add packages here
+# - one per line
 prefix: "/opt/conda"
-

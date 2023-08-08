@@ -3,17 +3,17 @@
   "@renku_oid": "activity-catalog",
   "_EMPTY_name_TO_relcount_relset": {
     "@renku_data_type": "BTrees.OOBTree.OOBTree",
-    "@renku_oid": "3e072deaacaf4041af4704cc01c9d7437036601a0982420cbdbeb50f525b693a",
+    "@renku_oid": "2129c1ace3c246c7ba1f34cb4d1e89cd5765b3b5b769404281d198fc432a9621",
     "@renku_reference": true
   },
   "_attrs": {
     "@renku_data_type": "BTrees.OOBTree.OOBucket",
-    "@renku_oid": "b734aa4813c5496a91d2570ff729d6857e5367140627465db95d3d68f50aeb5c",
+    "@renku_oid": "62ad5f1e9f2b4d2a996d765266266e2039d9623e90634555bd5750d269f7cb8d",
     "@renku_reference": true
   },
   "_name_TO_mapping": {
     "@renku_data_type": "BTrees.OOBTree.OOBTree",
-    "@renku_oid": "c433493804354efba654183fe13b077c3cdcded60e544b7491c7013621c56965",
+    "@renku_oid": "0381c7938ad244c5aa3441afe7b83e6d179a71afc85d4ce89f4c3e49304e7fcd",
     "@renku_reference": true
   },
   "_queryFactories": {
@@ -21,7 +21,7 @@
     "@renku_data_value": [
       {
         "@renku_data_type": "zc.relation.queryfactory.TransposingTransitive",
-        "@renku_oid": "73c590ec46804ea594d5cf96aeff3807c63a47191d094d32a30fb98bdea2c620",
+        "@renku_oid": "ff6e9e7b2e54466e9077db5012c75a22b84dfc3d0d7d4692b6b980f9e8375731",
         "@renku_reference": true
       }
     ]
@@ -75,7 +75,7 @@
   },
   "_reltoken_name_TO_objtokenset": {
     "@renku_data_type": "BTrees.OOBTree.OOBTree",
-    "@renku_oid": "98b1d7f469e44ce0978b0e1a016c62f3dd45a2b0397545cd862483c08429dbb1",
+    "@renku_oid": "90a040a6079a43aa8bc67a1f412ca37fe77c045487b847ee953dad5c96e2f549",
     "@renku_reference": true
   }
 }

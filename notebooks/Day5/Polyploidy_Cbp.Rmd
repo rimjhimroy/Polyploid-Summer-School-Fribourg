@@ -1,0 +1,300 @@
+---
+title: "Polyploidy Cbp"
+output:
+  html_document: default
+  pdf_document: default
+date: "2023-07-10"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries. ----------------------------------------------
+library(apercu)
+library(dplyr)
+library(data.table)
+library(edgeR)
+library(ggplot2)
+library(stringr)
+```
+
+
+# Importing dataset
+
+```{r loading data}
+# This imports the dataset needed for the workshop. 
+# The dataset is the read count of gene expression in different groups of Capsella (see Duan et al., 2022).
+
+# data. ---------------------------------------------------
+## DEG = differentially expressed genes. 
+deg.data   = 
+  fread("RNA104_unphased_all_HTSeq_downsampled_noTest.csv") %>% as_tibble()
+
+deg.matrix = deg.data %>% select( -gene ) %>% as.matrix() %>% 
+  ( function(x) {rownames(x) = deg.data$gene; x} )
+
+deg.info   = 
+  tibble( ID = names(deg.data)[-1] ) %>% 
+  mutate(
+    group  = str_remove(ID, "_.*$"),
+    tissue = str_extract(ID, ".$"),
+    ploidy = case_when( group %in% c("cbp","cg4","co4","sh","sd") ~ 4, T ~ 2 )
+  )
+
+## GFF = general feature format. 
+gff = fread("Crubella_183_v1.0.gene.gff3", skip = 2) %>% as_tibble() %>% 
+  select( scaffold = V1, type = V3, pos.beg = V4, pos.end = V5, gene = V9 ) %>% 
+  mutate( gene = 
+            str_extract(gene, "ID=Carubv[0-9]*m.g?.?v1.0") %>%
+            str_remove("ID=") 
+          )
+
+# miscellaneous variables. --------------------------------
+deg.color = 
+  c("cg2" = "#4CB2FF", "cg4" = "#2476FF", 
+    "co2" = "#66BF34", "co4" = "#318500", 
+    "f" = "#FFCD00", "sh" = "orange", "sd" = "#B30F0F"
+    )
+
+```
+
+
+```{r}
+# print the first ten rows and dimensions of the imported dataset. 
+deg.data
+```
+
+Each row is a gene (where the label is in the column "gene"), and each column is an individual. If the name starts with:
+
+* "cbp": it is a *Capsella bursa-pastoris*.
+* "cg2": it is a natural diploid *C. grandiflora*. 
+* "cg4": it is an artificial tetraploid *C. grandiflora*.
+* "co2": it is a natural diploid *C. orientalis*.
+* "co4": it is an artificial tetraploid *C. orientalis*. 
+* "f": it is an artificial hybrid between *C. grandiflora* and *C. orientalis*.
+* "sh": it is an artificial allotetraploid with hybridization first.
+* "sd": it is an artificial allotetraploid with doubling first. 
+
+If the name ends with "F", it is the gene expression in a flower; if it ends with "L", it is the gene expression in a leaf. 
+
+
+# Preliminary analyses
+
+## Genome scan
+
+There are 26,521 gene expression, and all genes are not equally expressed (i) within an individual and (ii) between individuals. 
+
+```{r across genes}
+## Within an individual ##
+# choose the name of the individual. ----------------------
+ID = "cbp_3_3_L"
+
+# plotting. -----------------------------------------------
+## x-axis: the genes (the order does not matter).
+## y-axis: gene expression.
+deg.data %>% 
+  select(x = all_of(ID)) %>% 
+      
+  ggplot() + 
+  geom_point( aes( seq_along(x), log10(x)) ) + 
+  
+  ggtitle(
+    paste0("Gene expression in ", ID, " (",
+           ifelse(str_detect(ID, "F$"), "flower", "leaf"), ")")) + 
+  ylab(parse(text = "log[10](gene~count)")) + 
+  theme_minimal() + 
+  theme(
+    axis.text.x  = element_blank(),
+    axis.title.x = element_blank(),
+    title        = element_text(colour = grey(0.3))
+  )
+```
+
+
+```{r across individuals}
+## Between individuals ##
+# choose the gene (the line number, not the name). --------
+geneID = 20
+
+# plotting. -----------------------------------------------
+## colored by Capsella groups. 
+deg.matrix[geneID,] %>% 
+  as_tibble( rownames = "ID" ) %>% 
+  left_join( deg.info, by = "ID" ) %>% 
+  
+  ggplot() + 
+  geom_point(aes(ID, log10(value), col = group, pch = tissue) ) + 
+  
+  scale_color_manual( values = deg.color ) +
+  ylab("Gene count") + 
+  theme_minimal() + 
+  theme(
+    axis.text.x = element_blank(),
+    title       = element_text(colour = grey(0.3))
+  )
+
+## colored by tissue. 
+deg.matrix[geneID,] %>% 
+  as_tibble( rownames = "ID" ) %>% left_join( deg.info, by = "ID" ) %>% 
+  
+  ggplot() + 
+  geom_point(aes(ID, log10(value), col = tissue) ) + 
+  
+  ylab("Gene count") + 
+  theme_minimal() + 
+  theme(
+    axis.text.x = element_blank(),
+    title       = element_text(colour = grey(0.3))
+  )
+
+```
+
+```{r exercise 1}
+# 1. What seems to be the strongest pattern? 
+
+# 2. How to select the genes that are differentially expressed in the different groups for a given tissue?
+
+# 3. With a threshold of 10^5, does the genes overlap?
+```
+
+
+
+# Diversity along the genome
+
+Divergence can be expressed by anything between few specific genes and the entire genome. When demographic dynamics or polygenic adaptation strikes, it is hard to detect a pattern with only few genes. Considering the gene expression data as a matrix of distance, Multidimensional Scaling (~ PCA) can be calculated.
+
+
+```{r MDS on raw data}
+# 1. compute the covariance matrix based on the DEG data. 
+deg.cov.dist = deg.matrix %>% crossprod() %>% cov2cor()
+
+# 2. compute MDS (~ PCA). 
+mds = cmdscale( 1-deg.cov.dist, k = 10, eig = T )
+
+# 3. constructing the plot. 
+mds.plot =
+  mds$points %>% as_tibble( rownames = "ID" ) %>% 
+  left_join( deg.info, by = "ID" ) %>% 
+  
+  ggplot() + 
+  geom_point( aes(V1, V2, pch = tissue, col = group), cex = 2 ) + 
+  
+  scale_color_manual( values = deg.color ) + 
+  xlab( paste0("Dim 1 (", 
+               round(100*mds$eig[1]**2/sum(mds$eig**2), 2), "%)") ) + 
+  ylab( paste0("Dim 2 (", 
+               round(100*mds$eig[2]**2/sum(mds$eig**2), 2), "%)") ) + 
+  theme_minimal() + 
+  theme(
+    axis.title = element_text( hjust = 0, color = grey(0.3)),
+    axis.text  = element_text( size = 7 )
+  )
+
+# 4. display. 
+mds.plot
+```
+
+It separates quite efficiently the different tissues, but not the *Capsella* groups. Are *Capsella* groups quite similar, or?
+
+
+```{r exercise 2}
+# 1. the previous code considers an euclidean distance between read counts. How would you compute a distance based on the order of magnitude rather than the raw values. 
+
+# 2. try the previous code with the new distance. 
+
+```
+
+
+
+# Automatization of the data treatment: edgeR
+
+"edgeR" (Robinson et al., 2010) is an R package made for differentially expressed gene dataset, automatizing all the preliminary data treatment, and computing useful statistics. 
+
+## Multidimensional Scaling
+
+```{r MDS}
+# 1. pre-treatment. ---------------------------------------
+y = DGEList(deg.matrix) %>% calcNormFactors()
+mds.edge = plotMDS(y, plot = F) # computing.
+
+# 2. plotting. --------------------------------------------
+tibble(
+  ID = mds.edge$distance.matrix.squared %>% rownames,
+  x  = mds.edge$x, y = mds.edge$y
+) %>% 
+  left_join( deg.info, by = "ID" ) %>% 
+  
+  ggplot() + 
+  geom_point( aes(x,y, col = group, pch = tissue), cex = 3) + 
+  
+  scale_color_manual( values = deg.color ) + 
+  xlab( paste0("Leading logFC dim 1 (", 
+               round(100*mds.edge$var.explained[1]), "%)") ) + 
+  ylab( paste0("Leading logFC dim 2 (", 
+               round(100*mds.edge$var.explained[2]), "%)") ) + 
+  theme_minimal()
+```
+
+
+```{r exercise 3}
+# 1. plotting the MDS by tissues. 
+## hint: subset the matrix "deg.matrix" based on its column names. 
+
+
+```
+
+
+## Volcano plots
+
+It is also possible to compare the gene expression between pairs of *Capsella* groups. The easiest way to display it is a Volcano plot.
+
+```{r statistical comparisons}
+# 1. choosing the groups to compare. ----------------------
+group  = "cbp|sh" # group1|group2.
+tissue = "F" # F for flower, L for leaves.
+
+# 2. computing statistics with edgeR. 
+q = deg.matrix[,str_detect(colnames(deg.matrix), paste0(tissue, "$")) & 
+                 str_detect(colnames(deg.matrix), group)]
+
+y = DGEList(q, group = colnames(q) %>% str_remove("_.*")) %>% 
+  calcNormFactors() %>% estimateCommonDisp() %>% estimateTagwiseDisp()
+
+test = glmFit(y) %>% glmLRT() %>% .$table %>% 
+  as_tibble( rownames = "gene" ) %>% 
+  mutate( fdr = p.adjust(PValue, "fdr") )
+
+# 3. volcano plot (FDR).
+test %>% 
+  
+  ggplot() + 
+  geom_point( aes(logFC, -log10(fdr), 
+                  col = -log10(fdr) > -log10(0.05) & abs(logFC) > 2 ),
+              show.legend = F ) + 
+  
+  xlab(parse(text = "log[2](Fold~Change)")) + ylab(parse(text = "-log[10](FDR)")) + 
+  scale_color_manual( values = c("FALSE" = "grey", "TRUE" = "#B30F0F") ) + 
+  ggtitle( 
+    paste0("Groups = ", 
+           str_remove(group, "\\|.*"), " vs ", str_remove(group, ".*\\|"), 
+           "; tissue = ", tissue) ) + 
+  theme_minimal() + 
+  theme(
+    title = element_text(color = grey(0.3))
+  )
+
+```
+
+```{r exercise 4}
+# 1. count the number of significantly differentially expressed genes for each comparison (logFC > 2, FDR < 0.05). 
+
+# 2. hybridization vs polyploidization: which one drives gene expression?
+```
+
+
+
+
+
+
+
