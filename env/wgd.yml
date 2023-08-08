@@ -1,0 +1,24 @@
+name: wgd
+channels:
+  - thiesgehrmann
+  - bioconda
+  - anaconda
+  - conda-forge
+dependencies:
+  - biopython=1.76
+  - blast=2.14.0
+  - diamond=2.1.8
+  - fasttree=2.1.11
+  - iadhore=3.0.01
+  - mafft=7.520
+  - mcl=14.137
+  - muscle=5.1
+  - paml=4.9
+  - phyml=3.3.20211231
+  - emboss
+  - gawk
+  - r-data.table
+  - r-argparse
+  - r-dplyr
+  - r-vroom
+prefix: /opt/conda/envs/wgd
