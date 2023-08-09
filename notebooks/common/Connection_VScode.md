@@ -17,18 +17,18 @@
    - Search for "Remote - SSH" extension and install it.
    - Once installed, the extension will be activated automatically.
 
-     ![Install Remote - SSH Extension](/images/install_remote_ssh.jpg)
+     ![Install Remote - SSH Extension](../../images/install_remote_ssh.jpg)
 
 4. Click on the Remote Explorer Icon:
    - In the VS Code sidebar, click on the screen icon with the two arrows (Remote Explorer)
 
-     ![Remote Explorer Icon](/images/remote_explorer_icon.jpg)
+     ![Remote Explorer Icon]((../../images/remote_explorer_icon.jpg)
 
 5. Add a new SSH Host:
    - In the Remote Explorer sidebar, click on the plus icon (+) to add a new SSH host.
    - In the SSH host input field, enter `ssh studentXX@binfservms01.unibe.ch` and press Enter.
 
-     ![Add New SSH Host](/images/add_new_host.jpg)
+     ![Add New SSH Host]((../../images/add_new_host.jpg)
 
 6. Once configured, the new SSH host will appear in the Remote Explorer sidebar.
    - Click on the new SSH host to connect to the IBU server.
