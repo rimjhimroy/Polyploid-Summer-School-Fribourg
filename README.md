@@ -7,6 +7,22 @@
 ## Introduction:
 Welcome to the Summer School on Polyploid evolutionary genomics, 2023 held at the University of Fribourg, Switzerland! This renku server provides you with a comprehensive guide and platform to follow to our specialized summer school practical session focused on various aspects of polyploidy research. Here, you will find details about the schedule, daily contents, and the esteemed instructors leading the exciting topics of the course.
 
+## Starting the session
+1. Use the start button on top right corner to start a new session.
+
+     ![start](/images/start.jpg)
+[Note] If you want to save your output and working files you first have to register on Renku, fork this repository and start from your own fork. Once you have progressed through the tutorials and want to save your files, just type `renku save` on the terminal.
+
+2. If you are starting the session for the first time it will take ~10 minutes to download the pre-build image files. So if you are seeing this page for a while, don't panic, your session will load soon.
+
+     ![loading](/images/loading.jpg)
+
+3. Once your session has started you will see the following page. You have the options highlighted here to work on these tutorials. In short for command line tools you can choose either ´Terminal´ or ´VScode´, For R tutorials, choose ´Rstudio´ and for graphical desktop choose ´VNC´.
+
+     ![workspace](/images/workspace.jpg)
+
+
+
 ## Schedule:
 
 #### Day 1: 
