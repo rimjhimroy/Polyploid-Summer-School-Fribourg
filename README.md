@@ -158,17 +158,6 @@ Note: you can upload files from the local computer into your environment via the
 Please see [the documentation](https://renku.readthedocs.io/en/latest/) for more details about Renku.
 
 
-## Working with the project
-
-The simplest way to start your project is right from the Renku platform - just click on the `Sessions` tab and start a new session. This will start an interactive environment right in your browser.
-
-To work with the project anywhere outside the Renku platform, click the `Settings` tab where you will find the git repo URLs - use `git` to clone the project on whichever machine you want.
 
 
-## Project configuration
-
-Project options can be found in `.renku/renku.ini`. In this project there is currently three options, which specifies the default type of environment to open
-`/rstudio` for Rstudio.
-`/vnc` for the virtual desktop. 
-`/lab` for JupyterLab interface with rstudio, vnc jupyterlab and vscode.
 
