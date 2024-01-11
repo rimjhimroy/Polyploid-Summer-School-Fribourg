@@ -53,6 +53,7 @@ Welcome to the Summer School on Polyploid evolutionary genomics, 2023 held at th
 - **Instructor:** [Dr. Paul Simion](https://ecobio.univ-rennes.fr/interlocuteurs/paul-simion), [Dr. Zhen Li](https://www.vandepeerlab.org/people/zheli), [Dr. Quinten Bafort](https://www.vandepeerlab.org/people/qubaf)
 - **Topic:** Gene trees – species tree reconciliation
 - **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day2/Reconciliation_Course_Practicals.md)
+- **Presentation:** [<span style="color:red">Link</span>](https://renkulab.io/sessions/rimjhim-2e-polyploid-2dsummer-2dsch-d80a3683/files/presentations/Day2/POLYDIV_reconciliation_PS_v3.pdf?_xsrf=2%7C59b8bd26%7Cc0294a7621dc40bbcc4760949e82f2f5%7C1704976434)
 - **Contents:**
   - Gene tree reconciliation enables to look for evidence for (very) ancient polyploidy, where this is often not possible with Ks age distributions, because of saturation of synonymous mutations for large evolutionary distances. 
   - Participants will learn to work with software to construct Ks age distributions, to make genomic
@@ -86,6 +87,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Instructor:** [Dr. Armel Salmon](https://ecobio.univ-rennes.fr/en/interlocutors/armel-salmon), [Dr. Rimjhim Roy Choudhury](https://rimjhimroy.github.io), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
 - **Topic:** Genotyping polyploids
 - **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day4/SNP_calling_polyploids.md)
+- **Presentation:** [<span style="color:red">Link</span>](https://renkulab.io/sessions/rimjhim-2e-polyploid-2dsummer-2dsch-d80a3683/files/presentations/Day4/Genotyping_polyploids_071823.pptx?_xsrf=2%7C59b8bd26%7Cc0294a7621dc40bbcc4760949e82f2f5%7C1704976434)
 - **Contents:**
   - Genotyping polyploids is challenging. Participants will learn about avoidable pitfalls when calling for single nucleotide polymorphisms as well as structural variants among polyploid samples and about strategies to accurately assess (fixed or partial) heterozygotes. 
   
@@ -95,6 +97,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Instructor:** [Dr. Sandra Grünig](https://www.unifr.ch/directory/fr/people/342164/fd61e), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
 - **Topic:** Autopolyploid populations
 - **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day4/Autopolyploid_populations.md)
+- **Presentation:** [<span style="color:red">Link</span>](https://renkulab.io/sessions/rimjhim-2e-polyploid-2dsummer-2dsch-d80a3683/files/presentations/Day4/Autopolyploids_Populations_introduction.pdf?_xsrf=2%7C59b8bd26%7Cc0294a7621dc40bbcc4760949e82f2f5%7C1704976434)
 - **Contents:**
   - Participants will learn how to assess tetrasomic inheritance and to compare the linkage and structure of genomic variation within and among populations of diploid-autotetraploid systems. 
   
@@ -104,7 +107,6 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Time:** 8.30
 - **Instructor:** [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825), [Dr Mathieu Tiret](https://www6.val-de-loire.inrae.fr/biofora/Personnel/Ils-ont-travaille-a-BioForA/TIRET-Mathieu)
 - **Topic:** Allopolyploid populations
-- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day5/Polyploidy_Cbp.Rmd)
 - **Contents:**
   - Participants will learn how to deal with genomic variation in allopolyploid systems that include wholegenome duplication and hybridization, with the latter that seems to matter more than the former, at least for expression. 
   
@@ -113,6 +115,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Time:** 13.30
 - **Instructor:** [Dr Mathieu Tiret](https://www6.val-de-loire.inrae.fr/biofora/Personnel/Ils-ont-travaille-a-BioForA/TIRET-Mathieu), [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825)
 - **Topic:** Allopolyploid populations
+- **Notebook:** [<span style="color:red">Link</span>](https://renkulab.io/projects/rimjhim.choudhury/polyploid-summer-school-2023/files/blob/notebooks/Day5/Polyploidy_Cbp.Rmd)
 - **Contents:**
   - Participants will learn that parental legacy plays an important role and seems to have a rather long-lasting effect. 
   - So to understand an allopolyploid we need to understand its parental species. Although allopolyploid subgenomes have been in the same individuals for a long time and therefore have had the same demography they still differ significantly.
@@ -131,6 +134,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Time:** 8.30
 - **Instructor:** [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
 - **Topic:** Interpretations and conclusions”
+- **Presentation:** [<span style="color:red">Link</span>](https://renkulab.io/sessions/rimjhim-2e-polyploid-2dsummer-2dsch-d80a3683/files/presentations/Day4/Generalities_polyploidy.pdf?_xsrf=2%7C59b8bd26%7Cc0294a7621dc40bbcc4760949e82f2f5%7C1704976434)
 - **Contents:**
   - Participants will revisit hypotheses formulated at the beginning of the summer school in light of the approaches they have been practicing and highlight perspectives for polyploidy research at the population level. 
   
