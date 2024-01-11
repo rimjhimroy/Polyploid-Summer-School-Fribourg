@@ -1,5 +1,5 @@
 ---
-title: "Polyploidy Cbp"
+title: "Polyploidy Cbp (R markdown - open in Rstudio)"
 output:
   html_document: default
   pdf_document: default
