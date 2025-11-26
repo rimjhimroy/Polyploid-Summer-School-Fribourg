@@ -32,7 +32,7 @@ The Renkulab server instance to run the session is provided here: https://renkul
 - **Time:** 13:30
 - **Instructor:** [Dr. Quinten Bafort](https://www.vandepeerlab.org/people/qubaf), [Dr. Zhen Li](https://www.vandepeerlab.org/people/zheli)
 - **Topic:** Assembly of polyploid genomes and subgenome evolution
-- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/notebooks/Day1/Assembly_of_polyploid_genomes.md)
+- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/notebooks/Day1/Assembly_of_polyploid_genomes.md)
 - **Contents:**
   - Participants will learn about the extra complexities of (the assembly of) polyploid genomes that consist of (very) similar or identical subgenomes. 
   - Participants will learn about how to look for evidence of subgenome dominance, and ongoing rediploidization.
