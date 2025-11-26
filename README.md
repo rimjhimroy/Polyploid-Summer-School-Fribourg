@@ -43,7 +43,7 @@ The Renkulab server instance to run the session is provided here: https://renkul
 - **Time:** 8.30
 - **Instructor:** [Dr. Zhen Li](https://www.vandepeerlab.org/people/zheli), [Dr. Quinten Bafort](https://www.vandepeerlab.org/people/qubaf)
 - **Topic:** Ks age distribution and genomic dot plots
-- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/notebooks/Day2/Ks_age_distribution_and_genomic_dot_plots.md)
+- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/notebooks/Day2/Ks_age_distribution_and_genomic_dot_plots.md)
 - **Contents:**
   - The construction of Ks age distributions and genomic dot plots are two of the most widely used and important ways to find evidence for ancient polyploidy. 
   - Where the construction of Ks distributions is not based on structural information and can be even based on extensive transcriptome information, the construction of genomic dot plots requires structural information and a well-assembled genome.
@@ -53,8 +53,8 @@ The Renkulab server instance to run the session is provided here: https://renkul
 - **Time:** 13.30
 - **Instructor:** [Dr. Paul Simion](https://ecobio.univ-rennes.fr/interlocuteurs/paul-simion), [Dr. Zhen Li](https://www.vandepeerlab.org/people/zheli), [Dr. Quinten Bafort](https://www.vandepeerlab.org/people/qubaf)
 - **Topic:** Gene trees – species tree reconciliation
-- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/notebooks/Day2/Reconciliation_Course_Practicals.md)
-- **Presentation:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/presentations//Day2/POLYDIV_reconciliation_PS_v3.pdf)
+- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/notebooks/Day2/Reconciliation_Course_Practicals.md)
+- **Presentation:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/presentations/Day2/POLYDIV_reconciliation_PS_v3.pdf)
 - **Contents:**
   - Gene tree reconciliation enables to look for evidence for (very) ancient polyploidy, where this is often not possible with Ks age distributions, because of saturation of synonymous mutations for large evolutionary distances. 
   - Participants will learn to work with software to construct Ks age distributions, to make genomic
@@ -66,7 +66,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Time:** 8.30
 - **Instructor:** [Prof. Kentaro Shimizu](https://www.ieu.uzh.ch/en/staff/member/shimizu_kentaro.html), [Dr Masaomi Hatakeyama](https://www.ieu.uzh.ch/en/staff/member/hatakeyama_masaomi.html), [Dr. Moeko Okada](https://moekookada.github.io)
 - **Topic:** RNA-seq analysis using subgenome classification methods
-- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/notebooks/Day3/Homeologous_expression_analysis.md)
+- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/notebooks/Day3/Homeologous_expression_analysis.md)
 - **Contents:**
   - For high quality RNA-seq analysis of allopolyploid species, bioinformatic workflows called subgenome classification methods were developed. 
   - We will introduce bioinformatic workflow for subgenome classification methods (HomeoRoq, EAGLE-RC) combined with RNA-seq mapping and quantification tools.
@@ -87,7 +87,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Time:** 8.30
 - **Instructor:** [Dr. Armel Salmon](https://ecobio.univ-rennes.fr/en/interlocutors/armel-salmon), [Dr. Rimjhim Roy Choudhury](https://rimjhimroy.github.io), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
 - **Topic:** Genotyping polyploids
-- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/notebooks/Day4/SNP_calling_polyploids.md)
+- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/notebooks/Day4/SNP_calling_polyploids.md)
 - **Presentation:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/presentations/Day4/Genotyping_polyploids_071823.pptx)
 - **Contents:**
   - Genotyping polyploids is challenging. Participants will learn about avoidable pitfalls when calling for single nucleotide polymorphisms as well as structural variants among polyploid samples and about strategies to accurately assess (fixed or partial) heterozygotes. 
@@ -97,7 +97,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Time:** 13.30
 - **Instructor:** [Dr. Sandra Grünig](https://www.unifr.ch/directory/fr/people/342164/fd61e), [Prof. Christian Parisod](https://www.unifr.ch/bio/en/department/staff/prof/people/334843/93f3c)
 - **Topic:** Autopolyploid populations
-- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/notebooks/Day4/Autopolyploid_populations.md)
+- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/notebooks/Day4/Autopolyploid_populations.md)
 - **Presentation:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/presentations/Day4/Autopolyploids_Populations_introduction.pdf)
 - **Contents:**
   - Participants will learn how to assess tetrasomic inheritance and to compare the linkage and structure of genomic variation within and among populations of diploid-autotetraploid systems. 
@@ -116,7 +116,7 @@ dot plots, and to perform gene tree – species tree reconciliation.
 - **Time:** 13.30
 - **Instructor:** [Dr Mathieu Tiret](https://www6.val-de-loire.inrae.fr/biofora/Personnel/Ils-ont-travaille-a-BioForA/TIRET-Mathieu), [Prof. Martin Lascoux](https://www.katalog.uu.se/profile?id=N96-1825)
 - **Topic:** Allopolyploid populations
-- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/notebooks/Day5/Polyploidy_Cbp.Rmd)
+- **Notebook:** [<span style="color:red">Link</span>](https://github.com/rimjhimroy/Polyploid-Summer-School-Fribourg/blob/main/notebooks/Day5/Polyploidy_Cbp.Rmd)
 - **Contents:**
   - Participants will learn that parental legacy plays an important role and seems to have a rather long-lasting effect. 
   - So to understand an allopolyploid we need to understand its parental species. Although allopolyploid subgenomes have been in the same individuals for a long time and therefore have had the same demography they still differ significantly.
